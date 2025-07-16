@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>MY HOTEL</title>
+    <style>
+        .sign-card {
+            background-color: white;
+            padding: 30px 40px; 
+            margin: 100px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+            /* width: 100%; */
+        }
+
+        .sign-card h4 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color:red;
+            text-transform: uppercase;
+        }
+        
+        /* Container styling */
+        .container1 label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #e82b73;
+        }
+
+        .container1 input[type="text"],
+        .container1 input[type="email"],
+        .container1 input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .container1 input:focus {
+            border-color: #4f70da;
+            outline: none;
+            box-shadow: 0 0 10px #1f42b555;
+        }
+
+        /* Signin button */
+        .container1 input[type="button"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #73a22b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .container1 input[type="button"]:hover {
+            background-color: #5a75d6;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>my hotel</h1>
+            <div class="col-3">
+                <nav>
+                    <ul>
+                        <li><a href="main.html">main</a></li>
+                        <li><a href="menu.html">about</a></li>
+                        <li><a href="#signin.html">sign in</a></li>
+                        <li><a href="admin.html">admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="sign-card">
+        <form>
+            <h4>Sign In here </h4>
+            <div class="container1">
+                <label for="fname">First-name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+
+                <label for="lname">Last-name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="email">email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="enter password" required>
+
+                <input type="button" value="signin" onclick="signupvalidation()">
+            </div>
+        </form>
+    </div>
+
+
+</body>
+<script>
+function signupvalidation() {
+    // Get form values
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    // Regular expression for email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validation checks
+    if (fname === "") {
+        alert("Please enter your first name.");
+        return;
+    }
+
+    if (lname === "") {
+        alert("Please enter your last name.");
+        return;
+    }
+
+    if (username === "") {
+        alert("Please enter your username.");
+        return;
+    }
+
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return;
+    }
+
+    // If all validations pass
+    alert("Signup successful!");
+    window.location.href = "index.html"; 
+}
+</script>
+
+
+</html>

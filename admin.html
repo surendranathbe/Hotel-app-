@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .row1 {
+            border: 2px solid black;
+            background-image: url(https://t4.ftcdn.net/jpg/01/05/72/61/360_F_105726195_r0MpL0Noxp2NeMh3RsRwCskbeL7ensjV.jpg);
+            display: block;
+            padding: 30px;
+            margin: 40px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: chocolate;
+            background-color: antiquewhite;
+        }
+
+        form {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            text-transform: uppercase;
+            margin:20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            text-transform: uppercase;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>MY HOTEL</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>my hotel</h1>
+            <div class="col-3">
+                <nav>
+                    <ul>
+                        <li><a href="main.html">main</a></li>
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="signin.html">sign in</a></li>
+                        <li><a href="#admin.html">admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row1">
+            <h2>admin login</h2>
+            <div class="col-4">
+                <form>
+
+                    <label for="admin">Admin Name:</label>
+                    <input type="text" id="admin" name="admin" placeholder="enter the admin name" required>
+
+                    <label for="password">password:</label>
+                    <input type="password" name="password" id="pass" placeholder="enter your password" required>
+
+                    <input type="button" value="login" onclick="adminvalidation()">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+   <script src="adminlogin.js"></script>
+</html>

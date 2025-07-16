@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+.col-4 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(154, 186, 244);
+}
+
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #50bd38;
+    text-transform: uppercase;
+}
+
+
+.hero {
+    /* background: url(' */
+    color: rgb(159, 39, 39);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: #0077b6;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005f87;
+}
+
+
+section {
+    background-color: white;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.room, .food-item {
+    margin-bottom: 20px;
+}
+
+.room h3, .food-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #006d77;
+}
+
+.room p, .food-item p {
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+.room {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.room h3 {
+  margin-top: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.room p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.amenities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amenities li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}

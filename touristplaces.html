@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>MY HOTEL</title>
+    <style>
+        /* Navbar styling */
+        .navbar-2 {
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 8px;
+            /* text-align: center; */
+        }
+
+        /* Links inside the navbar */
+        .navbar-2 a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Hover effect */
+        .navbar-2 a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>my hotel</h1>
+            <div class="col-3">
+                <nav>
+                    <ul>
+                        <li><a href="main.html">main</a></li>
+                        <li><a href="#menu.html">about</a></li>
+                        <li><a href="signin.html">sign in</a></li>
+                        <li><a href="admin.html">admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="navbar-2">
+
+            <a href="hotel-rooms.html">hotel-rooms</a>
+            <a href="hotel-food.html">hotel-food</a>
+            <a href="vechicles-booking.html">vechicals</a>
+            <a href="#touristplaces.html">places</a>
+        </div>
+
+<div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="/images/Durgam Cheruvu Cable Bridge.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="/images/Snow World (Updated Attractions).jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="/images/Statue of Equality.jpg" style="width:100%" height="400px">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="/images/Durgam Cheruvu Cable Bridge.jpg" style="width:100%" height="400px">
+
+            </div>
+             <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="/images/Snow World (Updated Attractions).jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+        <div class="place-card">
+            <img src="./images/Statue of Equality.jpg"
+                alt="Statue of Equality">
+            <div class="place-details">
+                <h3>Statue of Equality</h3>
+                <p>A massive statue of Ramanuja, recently inaugurated near Shamshabad. The statue stands 216 feet tall
+                    and promotes the values of equality and spirituality.</p>
+            </div>
+        </div>
+
+        <!-- Place 2 -->
+        <div class="place-card">
+            <img src="./images/Tummalapalli Kalakshetram (Modern Cultural Center).jpg"
+                alt="Tummalapalli Kalakshetram">
+            <div class="place-details">
+                <h3>Tummalapalli Kalakshetram (Modern Cultural Center)</h3>
+                <p>A modern auditorium and cultural center showcasing music, dance, and heritage events. Attracts both
+                    tourists and locals for cultural experiences.</p>
+            </div>
+        </div>
+
+        <!-- Place 3 -->
+        <div class="place-card">
+            <img src="./images/Durgam Cheruvu Cable Bridge.jpg"
+                alt="Durgam Cheruvu Cable Bridge">
+            <div class="place-details">
+                <h3>Durgam Cheruvu Cable Bridge</h3>
+                <p>Hyderabad's newest iconic bridge offering scenic views, cycling paths, walking trails, and a modern
+                    urban vibe. Great for evening visits and photos.</p>
+            </div>
+        </div>
+
+        <!-- Place 4 -->
+        <div class="place-card">
+            <img src="./images/Snow World (Updated Attractions).jpg"
+                alt="Snow World Hyderabad">
+            <div class="place-details">
+                <h3>Snow World (Updated Attractions)</h3>
+                <p>Though not brand new, Snow World has upgraded its snow activities and virtual reality games. A
+                    perfect escape for families looking for indoor fun.</p>
+            </div>
+        </div>
+
+
+
+
+        <footer>
+            <p>&copy; 2023 My Hotel. All rights reserved.</p>
+            <p>Contact us: +91 1234567890</p>
+            <p>Address: 123 Hotel Street, City, Country</p>
+        </footer>
+</body>
+<script src="imagesliding.js"></script>
+</html>

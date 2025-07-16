@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>MY HOTEL</title>
+    <style>
+        /* Navbar styling */
+        .navbar-2 {
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 8px;
+            /* text-align: center; */
+        }
+
+        /* Links inside the navbar */
+        .navbar-2 a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Hover effect */
+        .navbar-2 a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>my hotel</h1>
+            <div class="col-3">
+                <nav>
+                    <ul>
+                        <li><a href="main.html">main</a></li>
+                        <li><a href="#menu.html">about</a></li>
+                        <li><a href="signin.html">sign in</a></li>
+                        <li><a href="admin.html">admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="navbar-2">
+
+            <a href="hotel-rooms.html">hotel-rooms</a>
+            <a href="#hotel-food.html">hotel-food</a>
+            <a href="vechicles-booking.html">vechicals</a>
+            <a href="touristplaces.html">places</a>
+        </div>
+<div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="/images/Chicken Biryani.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="/images/Fish Curry.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="/images/Chicken Tikka.jpg" style="width:100%" height="400px">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="/images/Paneer Butter Masala.jpg" style="width:100%" height="400px">
+
+            </div>
+             <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="/images/Chocolate Cake.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div class="food-card">
+            <img src="./images/Chicken Biryani.jpg" alt="Chicken Biryani">
+            <div class="food-details">
+                <h3>Chicken Biryani</h3>
+                <p>Aromatic basmati rice cooked with spicy chicken and herbs.</p>
+                <p class="price">₹180</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 2 -->
+        <div class="food-card">
+            <img src="./images/Paneer Butter Masala.jpg" alt="Paneer Butter Masala">
+            <div class="food-details">
+                <h3>Paneer Butter Masala</h3>
+                <p>Soft paneer cubes in a creamy tomato gravy.</p>
+                <p class="price">₹150</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 3 -->
+        <div class="food-card">
+            <img src="./images/Veg Fried Rice.jpg" alt="Veg Fried Rice">
+            <div class="food-details">
+                <h3>Veg Fried Rice</h3>
+                <p>Stir-fried rice with vegetables and soy sauce.</p>
+                <p class="price">₹120</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 4 -->
+        <div class="food-card">
+            <img src="./images/Mutton Rogan Josh.jpg" alt="Mutton Rogan Josh">
+            <div class="food-details">
+                <h3>Mutton Rogan Josh</h3>
+                <p>Slow-cooked mutton in a rich and aromatic gravy.</p>
+                <p class="price">₹250</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 5 -->
+        <div class="food-card">
+            <img src="./images/Fish Curry.jpg" alt="Fish Curry">
+            <div class="food-details">
+                <h3>Fish Curry</h3>
+                <p>Fresh fish cooked in a tangy and spicy curry sauce.</p>
+                <p class="price">₹200</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 6 -->
+        <div class="food-card">
+            <img src="./images/Veg Thali.jpg" alt="Veg Thali">
+            <div class="food-details">
+                <h3>Veg Thali</h3>
+                <p>A complete meal with assorted vegetarian dishes.</p>
+                <p class="price">₹180</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 7 -->
+        <div class="food-card">
+            <img src="./images/Chicken Tikka.jpg" alt="Chicken Tikka">
+            <div class="food-details">
+                <h3>Chicken Tikka</h3>
+                <p>Grilled chicken marinated in spices and yogurt.</p>
+                <p class="price">₹200</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 8 -->
+        <div class="food-card">
+            <img src="./images/Pasta Primavera.jpg" alt="Pasta Primavera">
+            <div class="food-details">
+                <h3>Pasta Primavera</h3>
+                <p>Pasta tossed with seasonal vegetables in a light sauce.</p>
+                <p class="price">₹160</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+        <!-- Food Item 9 -->
+        <div class="food-card">
+            <img src="./images/Chocolate Cake.jpg" alt="Chocolate Cake">
+            <div class="food-details">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and moist chocolate cake with creamy frosting.</p>
+                <p class="price">₹100</p>
+                <a href="food-ordering.html" class="book-now-btn">order now</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2023 My Hotel. All rights reserved.</p>
+        <p>Contact us: +91 1234567890</p>
+        <p>Address: 123 Hotel Street, City, Country</p>
+    </footer>
+</body>
+<script src="imagesliding.js"></script>
+</html>

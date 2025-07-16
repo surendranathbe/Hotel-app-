@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Corrected class name from .conatiner to .container */
+        .container,
+        .conatiner {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Style the form labels and inputs */
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* Style the submit button */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="conatiner">
+        <div class="booking-form">
+            <h2>Book a Room</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="room">Select Room:</label>
+                <select id="room" required>
+                    <option value="">-- Choose a Room --</option>
+                    <option value="Deluxe Room">Deluxe Room - ₹3000</option>
+                    <option value="Standard Room">Standard Room - ₹2000</option>
+                    <option value="Suite Room">Suite Room - ₹5000</option>
+                    <option value="single room">single room -₹1500 </option>
+                    <option value="family room">family room - ₹4000</option>
+                    <option value="double room">double room - ₹2500</option>
+                </select>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" required>
+
+                <button type="submit" class="submit-btn" onclick="caltotal()">Submit Booking</button>
+                <div id="total-cost" style="margin-top: 15px; font-weight: bold; color: #333;"></div>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+
+    function caltotal() {
+    event.preventDefault(); // Prevent form submission
+
+    const roomType = document.getElementById("room").value;
+    const checkin = new Date(document.getElementById("checkin").value);
+    const checkout = new Date(document.getElementById("checkout").value);
+
+    if (!roomType || !checkin || !checkout || checkout <= checkin) {
+        alert("Please select a valid room and valid dates.");
+        return;
+    }
+
+    const roomRates = {
+        "Deluxe Room": 3000,
+        "Standard Room": 2000,
+        "Suite Room": 5000,
+        "single room": 1500,
+        "family room": 4000,
+        "double room": 2500
+    };
+
+    const roomRate = roomRates[roomType];
+    const timeDiff = checkout.getTime() - checkin.getTime();
+    const numNights = timeDiff / (1000 * 3600 * 24);
+    const totalCost = roomRate * numNights;
+
+    // Show the result in the page
+    const resultDiv = document.getElementById("total-cost");
+    resultDiv.innerHTML = `Room Type: <b>${roomType}</b><br>
+                           Nights: <b>${numNights}</b><br>
+                           Total Cost: <b>₹${totalCost}</b>`;
+}
+
+</script>
+
+</html>

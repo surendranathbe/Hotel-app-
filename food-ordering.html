@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .order-form {
+      background-color: #ffffff;
+      margin-top: 50px;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .order-form label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .order-form input,
+    .order-form select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .total-amount {
+      margin-top: 30px;
+      padding: 20px 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 80%;
+      /* width: 300px; */
+    }
+
+    .total-amount h2 {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    #total-amount {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="order-form">
+    <h2>Place Your Order</h2>
+<form onsubmit="caltotal(event)">
+  <label for="customer-name">Your Name:</label>
+  <input type="text" id="customer-name" placeholder="Enter your name" required>
+
+  <label for="veg-item">Select Veg Food Item:</label>
+  <select id="veg-item" required>
+    <option value="">-- Choose an Item --</option>
+    <option value="Paneer Butter Masala">Paneer Butter Masala - ₹150</option>
+    <option value="veg Fried rice">veg Fried rice - ₹120</option>
+    <option value="Veg Thali">Veg Thali - ₹180</option>
+    <option value="Pasta Primavera">Pasta Primavera - ₹160</option>
+  </select>
+
+  <label for="quantity1">Quantity for Veg:</label>
+  <input type="number" id="quantity1" placeholder="Enter quantity" required>
+
+  <label for="nonveg-item">Select Non-Veg Food Item:</label>
+  <select id="nonveg-item" required>
+    <option value="">-- Choose an Item --</option>
+    <option value="Chicken Biryani">Chicken Biryani - ₹180</option>
+    <option value="Fish Curry">Fish Curry - ₹200</option>
+    <option value="Chicken Tikka">Chicken Tikka - ₹200</option>
+  </select>
+
+  <label for="quantity2">Quantity for Non-Veg:</label>
+  <input type="number" id="quantity2" placeholder="Enter quantity"  required>
+
+  <button type="submit" class="submit-btn">Submit Order</button>
+</form>
+
+<div class="total-amount">
+  <h2>Total Amount</h2>
+  <p id="total-amount">₹0</p>
+</div>
+
+
+</body>
+<script>
+function caltotal(event) {
+  event.preventDefault(); // Prevent form submission
+
+  const customerName = document.getElementById("customer-name").value;
+  const vegItem = document.getElementById("veg-item").value;
+  const vegQty = parseInt(document.getElementById("quantity1").value);
+  const nonVegItem = document.getElementById("nonveg-item").value;
+  const nonVegQty = parseInt(document.getElementById("quantity2").value);
+
+  // Veg item prices
+  const vegPrices = {
+    "Paneer Butter Masala": 150,
+    "veg Fried rice": 120,
+    "Veg Thali": 180,
+    "Pasta Primavera": 160
+  };
+
+  // Non-veg item prices
+  const nonVegPrices = {
+    "Chicken Biryani": 180,
+    "Fish Curry": 200,
+    "Chicken Tikka": 200
+  };
+
+  const vegTotal = vegPrices[vegItem] * vegQty;
+  const nonVegTotal = nonVegPrices[nonVegItem] * nonVegQty;
+  const grandTotal = vegTotal + nonVegTotal;
+
+  // Display the total with customer name
+  const result = `
+    Customer Name: <b>${customerName}</b><br>
+    Veg Item: ${vegItem} × ${vegQty} = ₹${vegTotal}<br>
+    Non-Veg Item: ${nonVegItem} × ${nonVegQty} = ₹${nonVegTotal}<br><br>
+    <strong>Total Bill: ₹${grandTotal}</strong>
+  `;
+  document.getElementById("total-amount").innerHTML = result;
+}
+</script>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      margin-top: 40px;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+    .total-amount {
+      margin-top: 30px;
+      padding: 20px 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 80%;
+      /* width: 300px; */
+    }
+
+    .total-amount h2 {
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    #total-amount {
+      font-size: 15px;
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+
+</head>
+
+<body>
+  
+  <form>
+    <h2>Book Your Ride</h2>
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label for="vehicle">Select Vehicle:</label>
+    <select id="vehicle" required>
+      <option value="">-- Choose a Vehicle --</option>
+      <option value="Sedan">Sedan - ₹1500/day</option>
+      <option value="Innova Crysta">Innova Crysta - ₹2200/day</option>
+      <option value="Tempo Traveller">Tempo Traveller - ₹3000/day</option>
+      <option value="Luxury Car">Luxury Car - ₹5000/day</option>
+      <option value="Luxury Coach">Luxury Coach -₹10000</option>
+      <option value="mini-bus">mini-bus -₹4500</option>
+    </select>
+
+    <label for="pickup">Pickup Date:</label>
+    <input type="date" id="pickup" required>
+
+    <label for="time">Pickup Time:</label>
+    <input type="time" id="time" required>
+
+    <label for="days">Number of Days:</label>
+    <input type="number" id="days"  placeholder="Enter number of days" required>
+
+    
+
+    <button type="submit" class="submit-btn">Submit Booking</button>
+    <div class="total-amount">
+      <h2>Total Amount</h2>
+      <p id="total-amount">₹0</p>
+    </div>
+
+  </form>
+</body>
+<script>
+  // Handle the form submission and calculate total
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent form from reloading
+
+    const customerName = document.getElementById("name").value;
+    const vehicle = document.getElementById("vehicle").value;
+    const days = parseInt(document.getElementById("days").value);
+
+    // Vehicle rates per day
+    const vehicleRates = {
+      "Sedan": 1500,
+      "Innova Crysta": 2200,
+      "Tempo Traveller": 3000,
+      "Luxury Car": 5000,
+      "Luxury Coach": 10000,
+      "mini-bus": 4500
+    };
+
+    // Validate
+    if (!vehicle || !vehicleRates[vehicle] || isNaN(days) || days <= 0) {
+      alert("Please select a vehicle and enter a valid number of days.");
+      return;
+    }
+
+    const totalAmount = vehicleRates[vehicle] * days;
+
+    // Display the result
+    document.getElementById("total-amount").innerHTML = `
+      Customer Name: <b>${customerName}</b><br>
+      Vehicle: <b>${vehicle}</b><br>
+      Days: <b>${days}</b><br>
+      <br>
+      <span style="color: green;">Total Bill: <b>₹${totalAmount}</b></span>
+    `;
+  });
+</script>
+
+</html>

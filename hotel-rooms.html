@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>MY HOTEL</title>
+    <style>
+        /* Navbar styling */
+        .navbar-2 {
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 8px;
+            /* text-align: center; */
+        }
+
+        /* Links inside the navbar */
+        .navbar-2 a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Hover effect */
+        .navbar-2 a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>my hotel</h1>
+            <div class="col-3">
+                <nav>
+                    <ul>
+                        <li><a href="main.html">main</a></li>
+                        <li><a href="#menu.html">about</a></li>
+                        <li><a href="signin.html">sign in</a></li>
+                        <li><a href="admin.html">admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="navbar-2">
+
+            <a href="hotel-rooms.html">hotel-rooms</a>
+            <a href="hotel-food.html">hotel-food</a>
+            <a href="vechicles-booking.html">vechicals</a>
+            <a href="touristplaces.html">places</a>
+        </div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="/images/family rooms.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="/images/hotel1.webp" style="width:100%" height="400px">
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="/images/hotel3.jpg" style="width:100%" height="400px">
+
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="/images/tourist1.jpg" style="width:100%" height="400px">
+
+            </div>
+             <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="/images/enjoy1.jpg" style="width:100%" height="400px">
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div class="room-card">
+            <img src="./images/Deluxe Room1.jpg" alt="Deluxe Room">
+            <div class="room-details">
+                <h3>Deluxe Room</h3>
+                <p>Spacious room with king-size bed, AC, Wi-Fi, and attached bathroom.</p>
+                <p class="rate">₹3000 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card">
+            <img src="./images/Standard Room 1.avif" alt="Standard Room">
+            <div class="room-details">
+                <h3>Standard Room</h3>
+                <p>Comfortable room with queen-size bed, fan, and TV.</p>
+                <p class="rate">₹2000 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+
+            </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card">
+            <img src="./images/Suite Room 1.jpg" alt="Suite Room">
+            <div class="room-details">
+                <h3>Suite Room</h3>
+                <p>Luxury suite with living area, mini-bar, bathtub, and balcony view.</p>
+                <p class="rate">₹5000 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+
+            </div>
+        </div>
+        <!-- Room 4 -->
+        <div class="room-card">
+            <img src="./images/single room.avif" alt="Single Room">
+            <div class="room-details">
+                <h3>Single Room</h3>
+                <p>Cozy room with single bed, desk, and private bathroom.</p>
+                <p class="rate">₹1500 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+
+            </div>
+        </div>
+        <!-- Room 5 -->
+        <div class="room-card">
+            <img src="./images/Double Room1.avif" alt="Double Room">
+            <div class="room-details">
+                <h3>Double Room</h3>
+                <p>Room with two single beds, ideal for friends or family.</p>
+                <p class="rate">₹2500 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+
+            </div>
+        </div>
+        <!-- Room 6 -->
+        <div class="room-card">
+            <img src="./images/family rooms1.jpg" alt="Family Room">
+            <div class="room-details">
+                <h3>Family Room</h3>
+                <p>Spacious room with multiple beds, perfect for families.</p>
+                <p class="rate">₹4000 per day</p>
+                <a href="bookingroom.html" class="book-now-btn">Book Now</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+        <footer>
+            <p>&copy; 2023 My Hotel. All rights reserved.</p>
+            <p>Contact us: +91 1234567890</p>
+            <p>Address: 123 Hotel Street, City, Country</p>
+        </footer>
+</body>
+<script src="imagesliding.js"></script>
+</html>
